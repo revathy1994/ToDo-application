@@ -23,11 +23,11 @@ The user session expires after 60 minutes and the user gets automatically logged
 The password must be 8 characters including letters and numbers.
 
 
-## Build
+# Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## To Run Project
+# To Run Project
 
 Step 1: Clone the repository - git clone
 |Step 2: open the project in any IDE
@@ -49,7 +49,7 @@ Password: keith001
 The user will receive notification of their tasks lists to be completed on the current date.
 
 2. Filter - 
-The user can filter their tasks in 3 types:
+The user can filter their tasks into 3:
     All - All the ongoing and the completed tasks will list under 'All',
     Completed - The completed task till date will list under 'Completed',
     Ongoing - The current ongoing task or the the tasks to be completed will lists under 'Ongoing'
