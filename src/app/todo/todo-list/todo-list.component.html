@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-6">
+      <button mat-fab color="primary" (click)="openDialog()" >
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div class="col-6">
+      <mat-form-field appearance="fill">
+        <mat-label>Select Filter</mat-label>
+        <mat-select [(ngModel)]="filterValue" (ngModelChange)="onFilterChange()">
+          <mat-option *ngFor="let filter of filterOptions" [value]="filter">
+            {{filter}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+<div class="col-12">
+  <app-todo-item
+  *ngFor="let todo of filteredList"
+  (mark) = "mark($event)"
+  (delete)  = "delete($event)"
+  (update) = "update($event)"
+  [todo] = "todo"></app-todo-item>
+  <h1
+  *ngIf="filteredList.length == 0"
+  align="center"
+  class="fw-bold mt-4"
+  >It's pretty lonely in here...!</h1>
+</div>
+
+</div>

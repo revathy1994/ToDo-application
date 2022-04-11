@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "recipemanagement-c465e": {
+      "hosting": {
+        "todo-angular": [
+          "recipemanagement-c465e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "recipemanagement-c465e"
+  }
+}

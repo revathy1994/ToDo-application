@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+  <span class="fw-bold">TODO</span>
+  <span class="flex-expand"></span>
+  <div class="d-flex" *ngIf="isAuthenticated">
+    <div style="margin-right:15px;">
+      <button mat-icon-button [matMenuTriggerFor]="notification">
+        <mat-icon *ngIf="notifications.length == 0">notifications</mat-icon>
+        <mat-icon *ngIf="notifications.length > 0">
+          notifications_active</mat-icon>
+      </button>
+      <mat-menu #notification="matMenu" [overlapTrigger]="false" >
+        <div *ngIf = "notifications.length > 0">
+        <mat-list
+        *ngFor="let notification of notifications">
+          <mat-list-item class="fw-bold">{{ notification }} - Today</mat-list-item>
+      </mat-list>
+      </div>
+      <mat-list class="p-4 fw-bold" *ngIf="notifications.length == 0">No new Notifications</mat-list>
+      </mat-menu>
+    </div>
+    <span style="font-size: 15px;">{{user!.email.split('@')[0] | titlecase}}</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu"  >
+     <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false" >
+      <button mat-menu-item routerLink = "/todo" >
+        <mat-icon>account_circle</mat-icon>
+        <span>{{ user!.email }}</span>
+      </button>
+      <button mat-menu-item (click)="logout()" >
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+    <div>
+
+    </div>
+  </div>
+
+</mat-toolbar>
