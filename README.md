@@ -9,10 +9,10 @@ The user can securely login with their email and password to view, add, edit or 
 # Overview of the technologies
 
 The technologies used to build this web application are:
-Node 14
-Front-End framework: Angular 12.
-UI frameworks: Angular material
-               Bootstrap 5
+Node 14,
+Front-End framework: Angular 12,
+UI frameworks: Angular material,
+               Bootstrap 5,
 Database: Firebase realtime database 
 
 # Security Considerations
